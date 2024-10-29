@@ -9,14 +9,14 @@ const projects = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     imageUrl: 'https://cdn.dribbble.com/userupload/4274903/file/original-1171193ce6dc31fddb0a3c879155978e.jpg?resize=752x',
     githubUrl: 'https://github.com/Semzycoded/CoinPay-mobile-App',
-    liveDemoUrl: 'coin-pay-mobile-app.vercel.app',
+    liveDemoUrl: 'https://coin-pay-mobile-app.vercel.app',
   },
   {
     title: 'food-recipe-website',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     imageUrl: 'https://vercel.com/api/toolbar/link/food-recipe-website-one.vercel.app?via=new-project-success&p=1&page=/',
     githubUrl: 'https://github.com/Semzycoded/food-recipe-website',
-    liveDemoUrl: 'food-recipe-website-one.vercel.app',
+    liveDemoUrl: 'https://food-recipe-website-one.vercel.app',
   },
   // Add more projects as needed
 ];
