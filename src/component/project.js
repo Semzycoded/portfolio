@@ -6,14 +6,14 @@ import backArrow from "../assets/icons/arrowleftblue.svg"
 const projects = [
   {
     title: 'CoinPay mobile App',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'CoinPay is a mobile app for seamless, secure cryptocurrency payments and transfers. Manage, send, and receive crypto instantly with an intuitive, user-friendly interface.',
     imageUrl: 'https://cdn.dribbble.com/userupload/4274903/file/original-1171193ce6dc31fddb0a3c879155978e.jpg?resize=752x',
     githubUrl: 'https://github.com/Semzycoded/CoinPay-mobile-App',
     liveDemoUrl: 'https://coin-pay-mobile-app.vercel.app',
   },
   {
     title: 'food-recipe-website',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'It is a vibrant food recipe website offering easy, delicious recipes for all skill levels. Discover your favorite dishes in just a few clicks!',
     imageUrl: 'https://vercel.com/api/toolbar/link/food-recipe-website-one.vercel.app?via=new-project-success&p=1&page=/',
     githubUrl: 'https://github.com/Semzycoded/food-recipe-website',
     liveDemoUrl: 'https://food-recipe-website-one.vercel.app',
@@ -47,7 +47,7 @@ const Project = () => {
                   GitHub
                 </Button>
                 {project.liveDemoUrl && (
-                  <Button variant="success" className="ml-2" href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+                  <Button variant="success" className="ml-4" href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
                     Live Demo
                   </Button>
                 )}

@@ -12,9 +12,15 @@ const Header = () =>{
     </div>
     <span className="navbar-text ms-auto md-lg-0">
       <div className="social-icon">
-        <a href=""><img style={{borderRadius:"50%", position:"static"}} src={whatsapp} alt="" /></a>
-        <a href=""><img style={{borderRadius:"50%", position:"static"}} src={facebook} alt="" /></a>
-        <a href=""><img style={{borderRadius:"50%", position:"static"}} src={insta} alt="" /></a>
+        <a href="https://wa.me/2348136151937" target="_blank" rel="noopener noreferrer">
+          <img style={{borderRadius:"50%", position:"static"}} src={whatsapp} alt="" />
+        </a>
+        <a href="https://web.facebook.com/profile.php?id=100095535751183" target="_blank" rel="noopener noreferrer">
+          <img style={{borderRadius:"50%", position:"static"}} src={facebook} alt="" />
+        </a>
+        <a href="https://www.instagram.com/semzy2007/" target="_blank" rel="noopener noreferrer">
+          <img style={{borderRadius:"50%", position:"static"}} src={insta} alt="" />
+        </a>
       </div>
       </span>
    <ul className="nav nav-pills ms-auto mb-2 md-lg-0" id="pills-tab" role="tablist">

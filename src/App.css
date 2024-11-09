@@ -44,10 +44,10 @@ code {
 .pro{
   position: absolute;
   color:white;
-  padding:5px;
+  padding-left:5px;
 }
 .progress{
-  height: 40%;
+  /* height: 70%; */
   transition:0.5s ease;
 }
 .progress:hover{
@@ -77,12 +77,12 @@ span.navbar-text{
   margin-left:14px;
 }
 .social-icon a{
-  width: 44px;
-  height:44px;
+  width: 33px;
+  height:33px;
   background:rgba(217, 217, 217, 0.1);
   display:inline-flex;
   border-radius:50%;
-  margin-right:6px;
+  margin-right:30px;
   align-items:center;
   justify-content: center;
   line-height:1;
