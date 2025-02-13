@@ -8,8 +8,8 @@ const projects = [
     title: 'CoinPay mobile App',
     description: 'CoinPay is a mobile app for seamless, secure cryptocurrency payments and transfers. Manage, send, and receive crypto instantly with an intuitive, user-friendly interface.',
     imageUrl: 'https://cdn.dribbble.com/userupload/4274903/file/original-1171193ce6dc31fddb0a3c879155978e.jpg?resize=752x',
-    githubUrl: 'https://github.com/Semzycoded/CoinPay-mobile-App',
-    liveDemoUrl: 'https://coin-pay-mobile-app.vercel.app',
+    githubUrl: 'https://github.com/Semzycoded/Coinpay-Mobile-App',
+    liveDemoUrl: 'https://coinpay-mobile-app.vercel.app/',
   },
   {
     title: 'food-recipe-website',
