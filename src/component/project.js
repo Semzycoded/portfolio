@@ -23,10 +23,8 @@ const projects = [
 
 const Project = () => {
   return (
-<<<<<<< HEAD
     <div className='my-5'>
-=======
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
+
     <Container className="mt-5">
  <div style={{marginTop:"5vh",position:"absolute"}}>
                         <NavLink className="nav-link active" id="pills-home-tab" data-toggle="pill" to="/about" role="tab" aria-controls="pills-home" aria-selected="true">
@@ -42,11 +40,8 @@ const Project = () => {
       <Row>
         {projects.map((project, index) => (
           <Col key={index} lg={4} md={6} className="mb-4">
-<<<<<<< HEAD
             <Card style={{width:"400px", height:"400px"}}>
-=======
-            <Card>
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
+
               <Card.Img variant="top" src={project.imageUrl} alt={project.title} />
               <Card.Body>
                 <Card.Title>{project.title}</Card.Title>
@@ -65,10 +60,7 @@ const Project = () => {
         ))}
       </Row>
     </Container>
-<<<<<<< HEAD
     </div>
-=======
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
   );
 };
 

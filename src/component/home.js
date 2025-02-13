@@ -4,10 +4,7 @@ import img from "../assets/images/ME.jpg";
 import About from "./about";
 import Service from "./service";
 import Contact from "./Contact";
-<<<<<<< HEAD
 import { motion } from "framer-motion";
-=======
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
 
 const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -51,17 +48,10 @@ const Home = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="homePage">
       <section className="container my-5 py-5">
         <div className="row">
           <div className="col-md-5 mt-2">
-=======
-    <div>
-      <section className="container my-5 py-4">
-        <div className="row">
-          <div className="col-md-5 mt-5">
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
             <h1 className="display-5 mb-4">
               I'm Adeoye Semilore <br />
               <p>{text}</p>
@@ -87,30 +77,30 @@ const Home = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }} // Adjust visibility trigger
-    > <About /></motion.div>
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <About />
+      </motion.div>
       <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }} // Adjust visibility trigger
-    > <Service /></motion.div>
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <Service />
+      </motion.div>
       <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false, amount: 0.3 }} // Adjust visibility trigger
-    > <Contact /></motion.div>
-=======
-      <About />
-      <Service />
-      <Contact />
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <Contact />
+      </motion.div>
     </div>
   );
 };

@@ -30,11 +30,8 @@ const Service = () =>{
        )
     }
     return(
-<<<<<<< HEAD
         <div className="servicePage py-2">
-=======
-        <div>
->>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
+
             <div className="container">
             <div style={{marginTop:"5vh",position:"absolute"}}>
                         <NavLink className="nav-link active" id="pills-home-tab" Data-toggle="pill" to="/" role="tab" aria-controls="pills-home" aria-selected="true">
