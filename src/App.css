@@ -24,7 +24,10 @@ body {
     background: linear-gradient(#2A00B7,#42006C); */
 }
 .ME{
+<<<<<<< HEAD
   margin-top:50px;
+=======
+>>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
   animation:updown 3s linear infinite;
 }
 @keyframes updown {
@@ -38,6 +41,10 @@ body {
     transform: translateY(-20px);
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
 code {
   font-family: monospace;
 }

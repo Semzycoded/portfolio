@@ -21,6 +21,27 @@ const Contact = () => {
     const submitHandle = (event) => {
         event.preventDefault();
 
+<<<<<<< HEAD
+=======
+        // EmailJS configuration
+        // emailjs.send(
+        //     "service_gma62g8",
+        //     "template_gbhues5",
+        //     {
+        //         name: data.name,
+        //         email: data.email,
+        //         message: data.msg,
+        //     },
+        //     "YOUR_USER_ID"
+        // )
+        // .then((response) => {
+        //     alert("Message sent successfully!");
+        // })
+        // .catch((error) => {
+        //     alert("Failed to send the message, please try again later.");
+        // });
+
+>>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
         emailjs.send('service_gma62g8', 'template_gbhues5', {
         from_name: data.name,
         from_email: data.email,
@@ -36,7 +57,11 @@ const Contact = () => {
     };
 
     return (
+<<<<<<< HEAD
         <div className="contactPage py-5">
+=======
+        <div>
+>>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
             <section className="contact">
                 <div className="container">
                     <div style={{ marginTop: "5vh", position: "absolute" }}>

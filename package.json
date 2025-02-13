@@ -8,7 +8,10 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.2",
     "emailjs-com": "^3.2.0",
+<<<<<<< HEAD
     "framer-motion": "^12.2.0",
+=======
+>>>>>>> e7882fc90c73bffec8882d0dd8da4a2e9cbc9fac
     "gh-pages": "^6.2.0",
     "json-server": "^1.0.0-alpha.22",
     "react": "^18.2.0",
