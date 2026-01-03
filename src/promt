@@ -1,0 +1,86 @@
+✅ PORTFOLIO WEBSITE IMPROVEMENT PROMPT
+
+Prompt:
+
+I have a personal portfolio website for a junior frontend developer.
+Please redesign and improve it professionally with the following requirements:
+
+1. Homepage Hero Section
+
+Add a strong headline:
+“Hi, I’m Adeoye Timothy — a Junior Frontend Developer”
+
+Add a subtitle:
+“I build responsive, user-friendly web applications using React and JavaScript.”
+
+Include two call-to-action buttons:
+
+View Projects (scrolls to Projects section)
+
+Download CV (links to my CV PDF)
+
+Make the hero section modern, clean, and responsive.
+
+2. About Section
+
+Replace the existing content with:
+
+I am a Junior Frontend Developer and engineering student at Lagos State University (LASU). I enjoy building clean, responsive, and interactive web applications using modern frontend technologies. I am passionate about learning, improving my skills, and contributing to real-world projects.
+
+3. Projects Section
+
+For each project, display:
+
+Project title
+
+Short description
+
+Technologies used
+
+Live demo button
+
+GitHub repository button
+
+Example project content:
+Food Recipe App
+A dynamic recipe web application that fetches real-time data from a public API, allowing users to explore and filter meals.
+
+4. Contact Section
+
+Include:
+
+Email
+
+LinkedIn
+
+GitHub
+
+Remove WhatsApp contact option
+
+Keep the design professional and recruiter-friendly
+
+General Requirements
+
+Use clean UI/UX
+
+Fully responsive (mobile, tablet, desktop)
+
+Modern frontend best practices
+
+Professional look suitable for internships, SIWES, and junior frontend roles
+
+✅ HOW TO USE THIS PROMPT
+
+You can:
+
+Paste it into ChatGPT and ask for:
+
+React code
+
+Tailwind CSS version
+
+Plain HTML/CSS/JS version
+
+Give it to a developer
+
+Use it while rebuilding your portfolio yourself
