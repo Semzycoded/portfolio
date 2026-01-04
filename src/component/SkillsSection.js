@@ -16,20 +16,11 @@ const SkillsSection = () => {
       ],
     },
     {
-      category: 'Backend',
-      skills: [
-        { name: 'Node.js', level: 85 },
-        { name: 'MongoDB', level: 80 },
-        { name: 'Express.js', level: 85 },
-        { name: 'APIs', level: 82 },
-      ],
-    },
-    {
       category: 'Tools & Others',
       skills: [
         { name: 'Git/GitHub', level: 90 },
         { name: 'Firebase', level: 78 },
-        { name: 'Figma', level: 75 },
+        { name: 'Next.js', level: 75 },
         { name: 'SEO', level: 80 },
       ],
     },

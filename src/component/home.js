@@ -5,51 +5,60 @@ import Project from './project'
 import { motion } from 'framer-motion'
 
 const Home = () => {
-  const [loopNum, setLoopNum] = useState(0)
-  const [isDeleting, setIsDeleting] = useState(false)
   const toRotate = useMemo(() => ['Web Developer', 'Frontend Developer'], [])
   const [text, setText] = useState('')
   const [delta, setDelta] = useState(80 - Math.random() * 40)
   const period = 1000
   const tickerRef = useRef(null)
 
-  const stateRef = useRef({ text: '', loopNum: 0, isDeleting: false })
+  const stateRef = useRef({ text: '', loopNum: 0, isDeleting: false, delta: 80 - Math.random() * 40 })
 
   const tick = useCallback(() => {
-    const {
-      text: currentText,
-      loopNum: currentLoop,
-      isDeleting: currentDeleting,
-    } = stateRef.current
-    let i = currentLoop % toRotate.length
+    const state = stateRef.current
+    let i = state.loopNum % toRotate.length
     let fullText = toRotate[i]
-    let updatedText = currentDeleting
-      ? fullText.substring(0, currentText.length - 1)
-      : fullText.substring(0, currentText.length + 1)
+    let updatedText = state.text
+    let newIsDeleting = state.isDeleting
+    let newLoopNum = state.loopNum
+    let newDelta = state.delta
+    
+    if (!state.isDeleting && state.text.length < fullText.length) {
+      // Typing: add next character
+      updatedText = fullText.substring(0, state.text.length + 1)
+      newDelta = 80 - Math.random() * 40
+    } else if (state.isDeleting && state.text.length > 1) {
+      // Deleting: remove one character (keep at least 1)
+      updatedText = state.text.substring(0, state.text.length - 1)
+      newDelta = 35
+    } else if (state.isDeleting && state.text.length === 1) {
+      // Last character - replace it with first of next word
+      const nextIndex = (state.loopNum + 1) % toRotate.length
+      const nextWord = toRotate[nextIndex]
+      updatedText = nextWord.charAt(0)
+      
+      // Switch to next word and start typing
+      newLoopNum = state.loopNum + 1
+      newIsDeleting = false
+      newDelta = 80 - Math.random() * 40
+    } else if (!state.isDeleting && state.text === fullText) {
+      // Finished typing current word, pause then start deleting
+      newIsDeleting = true
+      newDelta = period
+      updatedText = state.text
+    }
 
+    // Update ref immediately
+    stateRef.current = {
+      text: updatedText,
+      loopNum: newLoopNum,
+      isDeleting: newIsDeleting,
+      delta: newDelta
+    }
+    
+    // Update state for rendering
     setText(updatedText)
-    stateRef.current.text = updatedText
-
-    if (currentDeleting) {
-      setDelta(35)
-    }
-
-    if (!currentDeleting && updatedText === fullText) {
-      setIsDeleting(true)
-      stateRef.current.isDeleting = true
-      setDelta(period)
-    } else if (currentDeleting && updatedText === '') {
-      setIsDeleting(false)
-      setLoopNum(currentLoop + 1)
-      stateRef.current.isDeleting = false
-      stateRef.current.loopNum = currentLoop + 1
-      setDelta(100)
-    }
+    setDelta(newDelta)
   }, [toRotate, period])
-
-  useEffect(() => {
-    stateRef.current = { text, loopNum, isDeleting }
-  }, [text, loopNum, isDeleting])
 
   useEffect(() => {
     tickerRef.current = setInterval(tick, delta)
@@ -87,11 +96,13 @@ const Home = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
+              style={{
+                display: 'inline-block',
+                whiteSpace: 'nowrap',
+                color: 'var(--text-primary)',
+              }}
             >
-              Hi, I'm Timothy —{' '}
-              <span style={{ color: '#0d6efd', whiteSpace: 'nowrap' }}>
-                {text}
-              </span>
+              Hi, I'm Timothy — <br/> <span style={{ color: '#0d6efd' }}>{text}</span>
             </motion.h1>
             <motion.p
               className="subtitle mb-4"

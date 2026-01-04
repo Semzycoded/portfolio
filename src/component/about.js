@@ -41,7 +41,7 @@ const About = () => {
               />
             </div>
             <div className="col-md-6 my-5">
-              <h1 className="display-5 mb-4">Adeoye Timothy</h1>
+              <h1 className="display-5 mb-4">Timothy Adeoye</h1>
               <p className="lead mb-5">
                 I am a Junior Frontend Developer and engineering student at
                 Lagos State University (LASU). I enjoy building clean,
@@ -55,7 +55,6 @@ const About = () => {
                   { label: 'CSS', value: '80%', color: 'bg-info' },
                   { label: 'JavaScript', value: '80%', color: 'bg-warning' },
                   { label: 'React', value: '90%', color: 'bg-danger' },
-                  { label: 'Python', value: '50%', color: 'bg-primary' },
                 ].map((skill, idx) => (
                   <div key={idx} className="progress my-4">
                     <div

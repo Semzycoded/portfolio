@@ -77,7 +77,7 @@ const Contact = () => {
                 <h2 className="mb-4 text-center">Send Me a Message</h2>
                 <form onSubmit={submitHandle}>
                   <div className="form-group">
-                    <label htmlFor="fullNameInput">Fullname</label>
+                    <label htmlFor="fullNameInput">Full Name</label>
                     <input
                       type="text"
                       className="form-control"
@@ -85,7 +85,7 @@ const Contact = () => {
                       name="name"
                       onChange={eventHandler}
                       value={data.name}
-                      placeholder="Fullname"
+                      placeholder="Full Name"
                       required
                     />
                   </div>
@@ -108,7 +108,7 @@ const Contact = () => {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="msgInput" className="form-label">
-                      Comments
+                      Leave a Message
                     </label>
                     <textarea
                       className="form-control"
@@ -136,38 +136,41 @@ const Contact = () => {
 
             {/* Contact Information Section */}
             <div className="row d-flex justify-content-center mt-5 pt-5 border-top">
-              <div className="col-md-8">
+              <div className="col-12">
                 <h2 className="mb-4 text-center">Get In Touch</h2>
-                <div className="row text-center">
-                  <div className="col-md-4 mb-4">
+                <div
+                  className="row text-center"
+                  style={{ marginBottom: '2rem' }}
+                >
+                  <div className="col-md-2 offset-md-1">
                     <h5>Email</h5>
                     <a
-                      href="mailto:your-email@example.com"
-                      className="text-decoration-none"
+                      href="mailto:adeoyesemilore2007@gmail.com"
+                      className="contact-link"
                     >
-                      your-email@example.com
+                      ➔ Tap to Email
                     </a>
                   </div>
-                  <div className="col-md-4 mb-4">
+                  <div className="col-md-2 offset-md-2">
                     <h5>LinkedIn</h5>
                     <a
-                      href="https://linkedin.com/in/your-profile"
+                      href="https://www.linkedin.com/in/adeoye-semilore-343b89350/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-decoration-none"
+                      className="contact-link"
                     >
-                      Connect on LinkedIn
+                      ➔ Tap to Connect on LinkedIn
                     </a>
                   </div>
-                  <div className="col-md-4 mb-4">
+                  <div className="col-md-2 offset-md-2">
                     <h5>GitHub</h5>
                     <a
                       href="https://github.com/Semzycoded"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-decoration-none"
+                      className="contact-link"
                     >
-                      Semzycoded
+                      ➔ Semzycoded
                     </a>
                   </div>
                 </div>

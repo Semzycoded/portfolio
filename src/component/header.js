@@ -39,7 +39,7 @@ const Header = () => {
           style={{ display: 'flex', alignItems: 'center', gap: '15px' }}
         >
           <a
-            href="https://www.linkedin.com/in/adeoye-timothy/"
+            href="https://www.linkedin.com/in/adeoye-semilore-343b89350/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn"

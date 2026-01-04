@@ -5,10 +5,10 @@ const Footer = () => {
     <footer className="mt-5 bg-primary text-white">
       <div className="container text-center py-3">
         <p className="mb-1">© {currentYear} Adeoye Semilore</p>
-        <div>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '3rem' }}>
           <a
-            href="https://www.linkedin.com/in/adeoye-timothy/"
-            className="text-white mx-2"
+            href="https://www.linkedin.com/in/adeoye-semilore-343b89350/"
+            className="text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -16,16 +16,13 @@ const Footer = () => {
           </a>
           <a
             href="https://github.com/Semzycoded"
-            className="text-white mx-2"
+            className="text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
             GitHub
           </a>
-          <a
-            href="mailto:adeoyesemilore2007@gmail.com"
-            className="text-white mx-2"
-          >
+          <a href="mailto:adeoyesemilore2007@gmail.com" className="text-white">
             Email
           </a>
         </div>
