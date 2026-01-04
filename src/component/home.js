@@ -1,6 +1,6 @@
 // import { NavLink } from 'react-router-dom'
 import { useState, useEffect, useRef, useCallback, useMemo } from 'react'
-import img from '../assets/images/ME.jpg'
+import img from '../assets/images/ME.png'
 import Project from './project'
 import { motion } from 'framer-motion'
 

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import img from '../assets/images/ME.jpg'
+import img from '../assets/images/ME.png'
 import backArrow from '../assets/icons/arrowleftblue.svg'
 import SkillsSection from './SkillsSection'
 
