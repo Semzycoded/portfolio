@@ -1,0 +1,73 @@
+/* Copy to Clipboard */
+.copy-to-clipboard-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: 2px solid rgba(100, 200, 255, 0.4);
+    border-radius: 8px;
+    background: rgba(100, 200, 255, 0.05);
+    backdrop-filter: blur(10px);
+    color: var(--text-primary);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.copy-to-clipboard-btn:hover {
+    border-color: rgba(100, 200, 255, 0.8);
+    background: rgba(100, 200, 255, 0.15);
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.copy-icon {
+    font-size: 18px;
+}
+
+.copy-text {
+    font-size: 14px;
+}
+
+.copy-feedback {
+    position: absolute;
+    right: 16px;
+    color: #4caf50;
+    font-weight: bold;
+    animation: slideInOut 2s ease;
+}
+
+@keyframes slideInOut {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .copy-to-clipboard-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .copy-icon {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,70 @@
+/* Site Signature */
+.site-signature {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    z-index: 50;
+}
+
+.signature-content {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(100, 200, 255, 0.3);
+    border-radius: 20px;
+    padding: 6px 12px;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.signature-content:hover {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: rgba(100, 200, 255, 0.6);
+    box-shadow: 0 0 10px rgba(100, 200, 255, 0.3);
+}
+
+.signature-text {
+    opacity: 0.7;
+}
+
+.signature-name {
+    font-weight: bold;
+    background: linear-gradient(135deg, #00d4ff, #9c27b0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 3s ease infinite;
+}
+
+.signature-year {
+    opacity: 0.6;
+    font-size: 10px;
+}
+
+@keyframes shimmer {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-signature {
+        font-size: 10px;
+        bottom: 5px;
+        left: 5px;
+    }
+
+    .signature-content {
+        padding: 5px 10px;
+        gap: 4px;
+    }
+}

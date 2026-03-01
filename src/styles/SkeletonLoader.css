@@ -1,0 +1,678 @@
+/* ========== PAGE LAYOUT SKELETON LOADER ========== */
+
+.skeleton-loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(26, 26, 26, 0.95) 0%,
+            rgba(45, 45, 45, 0.95) 50%,
+            rgba(26, 26, 26, 0.95) 100%);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 0;
+}
+
+/* Animated holographic background */
+.skeleton-bg-animation {
+    position: fixed;
+    width: 150%;
+    height: 150%;
+    top: -25%;
+    left: -25%;
+    background: linear-gradient(45deg,
+            rgba(0, 200, 255, 0.1) 0%,
+            rgba(139, 0, 255, 0.05) 25%,
+            rgba(0, 168, 232, 0.1) 50%,
+            rgba(255, 0, 110, 0.05) 75%,
+            rgba(0, 200, 255, 0.1) 100%);
+    animation: holoShift 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes holoShift {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        opacity: 1;
+    }
+}
+
+/* Floating particles */
+.skeleton-particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.skeleton-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: radial-gradient(circle at 30% 30%, rgba(0, 200, 255, 1), rgba(0, 200, 255, 0.3));
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.8), 0 0 20px rgba(0, 200, 255, 0.4);
+    animation: floatParticle 4s ease-in-out infinite;
+}
+
+@keyframes floatParticle {
+    0% {
+        transform: translateY(0) translateX(0) scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        transform: translateY(-300px) translateX(100px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Main page layout skeleton */
+.skeleton-page-layout {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 10;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* ========== NAVBAR SKELETON ========== */
+.skeleton-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 200, 255, 0.2);
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.skeleton-logo {
+    width: 80px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.skeleton-nav-links {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+.skeleton-nav-item {
+    width: 80px;
+    height: 18px;
+    border-radius: 3px;
+}
+
+.skeleton-nav-button {
+    width: 100px;
+    height: 35px;
+    border-radius: 4px;
+}
+
+/* ========== HERO SECTION ========== */
+.skeleton-hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+}
+
+.skeleton-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.skeleton-hero-title {
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+}
+
+.skeleton-hero-subtitle {
+    width: 90%;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.skeleton-hero-text {
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+}
+
+.skeleton-buttons-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.skeleton-button {
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.skeleton-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skeleton-profile-image {
+    width: 300px;
+    height: 350px;
+    border-radius: 12px;
+}
+
+/* ========== SECTIONS SKELETON ========== */
+.skeleton-section {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skeleton-section-heading {
+    width: 300px;
+    height: 45px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* ========== SKILLS SECTION ========== */
+.skeleton-skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skeleton-skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skeleton-skill-label {
+    width: 120px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-skill-bar {
+    width: 100%;
+    height: 25px;
+    border-radius: 20px;
+}
+
+/* ========== PORTFOLIO STATS SECTION ========== */
+.skeleton-stats-section {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skeleton-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.skeleton-stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(0, 200, 255, 0.05);
+    border: 1px solid rgba(0, 200, 255, 0.2);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.skeleton-stat-number {
+    width: 100px;
+    height: 40px;
+    border-radius: 6px;
+    margin: 0 auto;
+}
+
+.skeleton-stat-label {
+    width: 80%;
+    height: 18px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+/* ========== 3D TECH STACK SECTION ========== */
+.skeleton-3d-cube {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+.skeleton-3d-text {
+    width: 100%;
+    height: 25px;
+    border-radius: 4px;
+    margin: 1rem auto;
+    max-width: 400px;
+}
+
+/* ========== PROJECTS SECTION ========== */
+.skeleton-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skeleton-project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(0, 200, 255, 0.05);
+    border: 1px solid rgba(0, 200, 255, 0.2);
+    border-radius: 12px;
+}
+
+.skeleton-project-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.skeleton-project-title {
+    width: 80%;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.skeleton-project-description {
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.skeleton-project-tags {
+    width: 70%;
+    height: 20px;
+    border-radius: 4px;
+}
+
+/* ========== EXPERIENCE SECTION ========== */
+.skeleton-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    padding-left: 40px;
+}
+
+.skeleton-timeline-item {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+.skeleton-timeline-dot {
+    position: absolute;
+    left: -40px;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(0, 200, 255, 0.6);
+    border: 2px solid rgba(0, 200, 255, 0.3);
+}
+
+.skeleton-timeline-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.skeleton-timeline-title {
+    width: 70%;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.skeleton-timeline-subtitle {
+    width: 50%;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-timeline-description {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+}
+
+/* ========== FOOTER SKELETON ========== */
+.skeleton-footer {
+    padding: 3rem 0 1rem;
+    border-top: 1px solid rgba(0, 200, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skeleton-footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.skeleton-footer-text {
+    width: 250px;
+    height: 18px;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
+/* ========== SKELETON BOX BASE STYLES ========== */
+.skeleton-box {
+    background: linear-gradient(90deg,
+            rgba(0, 200, 255, 0.1) 0%,
+            rgba(0, 200, 255, 0.2) 50%,
+            rgba(0, 200, 255, 0.1) 100%);
+    border: 1px solid rgba(0, 200, 255, 0.15);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    animation: skeletonShimmer 2s infinite;
+}
+
+.skeleton-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 200, 255, 0.3),
+            transparent);
+    animation: shimmerMove 2s infinite;
+}
+
+@keyframes skeletonShimmer {
+
+    0%,
+    100% {
+        background: linear-gradient(90deg,
+                rgba(0, 200, 255, 0.1) 0%,
+                rgba(0, 200, 255, 0.2) 50%,
+                rgba(0, 200, 255, 0.1) 100%);
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.1);
+    }
+
+    50% {
+        background: linear-gradient(90deg,
+                rgba(0, 200, 255, 0.15) 0%,
+                rgba(0, 200, 255, 0.3) 50%,
+                rgba(0, 200, 255, 0.15) 100%);
+        box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
+    }
+}
+
+@keyframes shimmerMove {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* ========== STATUS INDICATOR ========== */
+.skeleton-status {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-text {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00c8ff;
+    text-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
+    animation: statusGlow 2s ease-in-out infinite;
+}
+
+@keyframes statusGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
+    }
+
+    50% {
+        text-shadow: 0 0 40px rgba(0, 200, 255, 1), 0 0 60px rgba(0, 200, 255, 0.6);
+    }
+}
+
+.loading-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.loading-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00c8ff;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
+    animation: dotBounce 1.4s infinite;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes dotBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+}
+
+/* ========== NEON RINGS ========== */
+.skeleton-rings {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+}
+
+.ring {
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    animation: ringExpand 3s ease-in-out infinite;
+}
+
+.ring-1 {
+    width: 80px;
+    height: 80px;
+    border-color: rgba(0, 200, 255, 0.5);
+    animation-delay: 0s;
+}
+
+.ring-2 {
+    width: 150px;
+    height: 150px;
+    border-color: rgba(139, 0, 255, 0.3);
+    animation-delay: 0.5s;
+}
+
+.ring-3 {
+    width: 220px;
+    height: 220px;
+    border-color: rgba(255, 0, 110, 0.2);
+    animation-delay: 1s;
+}
+
+@keyframes ringExpand {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+    .skeleton-page-layout {
+        gap: 2rem;
+    }
+
+    .skeleton-hero-section {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .skeleton-profile-image {
+        width: 250px;
+        height: 300px;
+    }
+
+    .skeleton-nav-links {
+        display: none;
+    }
+
+    .skeleton-navbar {
+        justify-content: space-between;
+    }
+
+    .skeleton-buttons-group {
+        flex-direction: column;
+    }
+
+    .skeleton-button {
+        width: 100%;
+    }
+
+    .skeleton-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-3d-cube {
+        height: 250px;
+    }
+}
+
+/* ========== SIMPLE SKELETON FOR COMPONENTS ========== */
+.simple-skeleton {
+    background: linear-gradient(90deg,
+            rgba(0, 200, 255, 0.1) 0%,
+            rgba(0, 200, 255, 0.2) 50%,
+            rgba(0, 200, 255, 0.1) 100%);
+    border: 1px solid rgba(0, 200, 255, 0.15);
+    animation: skeletonShimmer 2s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.simple-skeleton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(0, 200, 255, 0.3),
+            transparent);
+    animation: shimmerMove 2s infinite;
+}
+
+.skeleton-card-wrapper {
+    padding: 1.5rem;
+    background: rgba(0, 200, 255, 0.05);
+    border: 1px solid rgba(0, 200, 255, 0.2);
+    border-radius: 8px;
+}
+
+.skeleton-skills-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+}

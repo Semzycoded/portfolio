@@ -1,0 +1,24 @@
+/* Scroll Progress Bar */
+.scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0099ff, #9c27b0, #00bcd4);
+    background-size: 200% 100%;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+    animation: progressGlow 2s ease infinite;
+}
+
+@keyframes progressGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 10px rgba(0, 200, 255, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 200, 255, 0.8);
+    }
+}
