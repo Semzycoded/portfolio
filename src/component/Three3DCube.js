@@ -201,22 +201,21 @@ const Three3DCube = () => {
     }, [])
 
     return (
-        // <div
-        //     ref={containerRef}
-        //     style={{
-        //         width: '100%',
-        //         height: '500px',
-        //         borderRadius: '20px',
-        //         overflow: 'hidden',
-        //         boxShadow: '0 0 50px rgba(0, 168, 232, 0.4), 0 0 100px rgba(255, 0, 110, 0.2)',
-        //         background: 'linear-gradient(135deg, rgba(13, 110, 253, 0.1), rgba(0, 168, 232, 0.1))',
-        //         border: '2px solid rgba(0, 168, 232, 0.3)',
-        //         marginTop: '2rem',
-        //         cursor: 'grab',
-        //         position: 'relative',
-        //     }}
-        // />
-        <div/>
+        <div
+            ref={containerRef}
+            style={{
+                width: '100%',
+                height: '500px',
+                borderRadius: '20px',
+                overflow: 'hidden',
+                boxShadow: '0 0 50px rgba(0, 168, 232, 0.4), 0 0 100px rgba(255, 0, 110, 0.2)',
+                background: 'linear-grad ient(135deg, rgba(13, 110, 253, 0.1), rgba(0, 168, 232, 0.1))',
+                border: '2px solid rgba(0, 168, 232, 0.3)',
+                marginTop: '2rem',
+                cursor: 'grab',
+                position: 'relative',
+            }}
+        />
     )
 }
 

@@ -220,7 +220,7 @@ const Home = () => {
         </div>
       </section> */}
 
-      Testimonials Section
+      {/* Testimonials Section */}
       <section className="container my-5 py-5">
         <h2 className="text-center mb-5 display-5">Testimonials</h2>
         <div className="row justify-content-center">
