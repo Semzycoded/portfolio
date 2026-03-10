@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { NavLink, useNavigate } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 import linkedin from '../assets/images/linkedin.svg'
 import github from '../assets/images/github.svg'
@@ -8,7 +8,6 @@ import insta from '../assets/images/insta.svg'
 
 const Header = () => {
   const { isDark, toggleTheme } = useTheme()
-  const navigate = useNavigate()
   const [showMetrics, setShowMetrics] = useState(false)
   const [metrics, setMetrics] = React.useState({
     loadTime: 0,
@@ -27,10 +26,6 @@ const Header = () => {
       setMetrics((prev) => ({ ...prev, memoryUsage: memUsage }))
     }
   }, [])
-
-  const handleContactClick = () => {
-    navigate('/contact')
-  }
 
   return (
     <div className="d-flex navbar navbar-expand-lg navbar-dark bg-primary">

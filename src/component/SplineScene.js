@@ -6,8 +6,13 @@ import { useEffect, useRef } from 'react'
 const SplineScene = ({ sceneUrl, title = 'Interactive 3D Scene', height = '600px' }) => {
     const containerRef = useRef(null)
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
-        if (!containerRef.current || !sceneUrl) return
+        if (!sceneUrl) return
+
+        const currentContainer = containerRef.current
+        if (!currentContainer) return
 
         // Create iframe for Spline scene
         const iframe = document.createElement('iframe')
@@ -18,14 +23,16 @@ const SplineScene = ({ sceneUrl, title = 'Interactive 3D Scene', height = '600px
         iframe.style.borderRadius = '20px'
         iframe.style.boxShadow = '0 0 50px rgba(0, 168, 232, 0.3)'
 
-        containerRef.current.appendChild(iframe)
+        currentContainer.appendChild(iframe)
 
         return () => {
-            if (containerRef.current && iframe.parentNode === containerRef.current) {
-                containerRef.current.removeChild(iframe)
+            if (currentContainer && iframe.parentNode === currentContainer) {
+                currentContainer.removeChild(iframe)
             }
         }
-    }, [sceneUrl, height])
+    }, [sceneUrl, height,
+
+    // eslint-disable-next-line react-hooks/exhaustive-depscontainerRef])
 
     // If no URL provided, show setup instructions
     if (!sceneUrl) {

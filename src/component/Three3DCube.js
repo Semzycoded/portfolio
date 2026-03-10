@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import * as THREE from 'three'
 
 const Three3DCube = () => {
@@ -16,7 +16,6 @@ const Three3DCube = () => {
 
         // Detect theme and get background color
         const theme = localStorage.getItem('theme') || 'light'
-        const bgColor = theme === 'dark' ? '#1a1a1a' : '#ffffff'
         const bgColorNum = theme === 'dark' ? 0x1a1a1a : 0xffffff
 
         // Scene setup with transparent background
@@ -115,6 +114,9 @@ const Three3DCube = () => {
 
         window.addEventListener('resize', handleResize)
 
+        // Capture container reference for cleanup
+        const currentContainer = containerRef.current
+
         // Animation loop
         let animationId
         const animate = () => {
@@ -149,7 +151,7 @@ const Three3DCube = () => {
             if (!cube) return
 
             // Get position relative to container
-            const rect = containerRef.current?.getBoundingClientRect()
+            const rect = currentContainer?.getBoundingClientRect()
             if (!rect) return
 
             const containerX = e.clientX - rect.left
@@ -176,21 +178,21 @@ const Three3DCube = () => {
             mouseRef.current.targetY = 0
         }
 
-        if (containerRef.current) {
-            containerRef.current.addEventListener('mousemove', handleMouseMove)
-            containerRef.current.addEventListener('mouseleave', handleMouseLeave)
+        if (currentContainer) {
+            currentContainer.addEventListener('mousemove', handleMouseMove)
+            currentContainer.addEventListener('mouseleave', handleMouseLeave)
         }
 
         // Cleanup
         return () => {
             window.removeEventListener('resize', handleResize)
-            if (containerRef.current) {
-                containerRef.current.removeEventListener('mousemove', handleMouseMove)
-                containerRef.current.removeEventListener('mouseleave', handleMouseLeave)
+            if (currentContainer) {
+                currentContainer.removeEventListener('mousemove', handleMouseMove)
+                currentContainer.removeEventListener('mouseleave', handleMouseLeave)
             }
             cancelAnimationFrame(animationId)
-            if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
-                containerRef.current.removeChild(renderer.domElement)
+            if (currentContainer && renderer.domElement.parentNode === currentContainer) {
+                currentContainer.removeChild(renderer.domElement)
             }
             geometry.dispose()
             cubeMaterials.forEach(m => m.dispose())

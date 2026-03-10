@@ -5,7 +5,6 @@ import Project from './project'
 import Experience from './Experience'
 import PortfolioStats from './PortfolioStats'
 import Three3DCube from './Three3DCube'
-import SplineScene from './SplineScene'
 import { getPortfolioContent } from '../utils/portfolioContentManager'
 import { motion } from 'framer-motion'
 

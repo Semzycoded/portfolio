@@ -7,6 +7,8 @@ const Particles3D = () => {
   useEffect(() => {
     if (!containerRef.current) return
 
+    const currentContainer = containerRef.current
+
     // Scene setup
     const scene = new THREE.Scene()
     const width = window.innerWidth
@@ -18,7 +20,7 @@ const Particles3D = () => {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
     renderer.setSize(width, height)
     renderer.setPixelRatio(window.devicePixelRatio)
-    containerRef.current.appendChild(renderer.domElement)
+    currentContainer.appendChild(renderer.domElement)
 
     // Create particles
     const particleCount = 100
@@ -104,8 +106,8 @@ const Particles3D = () => {
     return () => {
       window.removeEventListener('resize', handleResize)
       cancelAnimationFrame(animationId)
-      if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
-        containerRef.current.removeChild(renderer.domElement)
+      if (currentContainer && renderer.domElement.parentNode === currentContainer) {
+        currentContainer.removeChild(renderer.domElement)
       }
       particles.dispose()
       particleMaterial.dispose()
