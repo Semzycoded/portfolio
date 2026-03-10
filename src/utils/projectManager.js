@@ -32,6 +32,16 @@ const DEFAULT_PROJECTS = [
         githubUrl: 'https://github.com/Semzycoded/solvex1',
         liveDemoUrl: 'https://solvex1.vercel.app',
     },
+    {
+        id: '4',
+        title: 'Crypto Dashboard',
+        description:
+            'A modern crypto dashboard built with Next.js (App Router) and TypeScript that displays live cryptocurrency data, interactive price charts, search & filter functionality, and dark mode support. This project demonstrates server-side data fetching, dynamic routing, and clean UI architecture using real-world APIs.',
+        technologies: ['Next.js 16+ (App Router)', 'TypeScript', 'Tailwind CSS 4', 'Recharts', 'CoinGecko REST API', 'React'],
+        imageUrl: 'https://image.thum.io/get/width/1200/https://crypto-dashboard-sigma-one.vercel.app',
+        githubUrl: 'https://github.com/Semzycoded/crypto-dashboard',
+        liveDemoUrl: 'https://crypto-dashboard-sigma-one.vercel.app',
+    },
 ]
 
 export const getAllProjects = () => {
