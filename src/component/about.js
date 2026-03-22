@@ -1,14 +1,13 @@
-import { NavLink } from 'react-router-dom'
-import img from '../assets/images/ME.png'
-import SkillsSection from './SkillsSection'
+import { NavLink } from "react-router-dom";
+import img from "../assets/images/ME.png";
+import SkillsSection from "./SkillsSection";
 
 const About = () => {
   return (
     <div>
       <section className="about">
         <header className="container">
-          <div style={{ marginTop: '5vh', position: 'absolute' }}>
-          </div>
+          <div style={{ marginTop: "5vh", position: "absolute" }}></div>
           <div className="row">
             <div className="col-12 text-center py-4 mb-5">
               <h1>About</h1>
@@ -21,11 +20,9 @@ const About = () => {
           <div className="row">
             <div className="col-md-6 text-center">
               <img
-                className="ME"
+                className="ME about-profile-image"
                 src={img}
                 alt="Adeoye Semilore"
-                width="300px"
-                height="300px"
               />
             </div>
             <div className="col-md-6 my-5">
@@ -39,10 +36,10 @@ const About = () => {
               </p>
               <div className="skill-bars">
                 {[
-                  { label: 'HTML/HTML5', value: '95%', color: 'bg-success' },
-                  { label: 'CSS', value: '80%', color: 'bg-info' },
-                  { label: 'JavaScript', value: '80%', color: 'bg-warning' },
-                  { label: 'React', value: '90%', color: 'bg-danger' },
+                  { label: "HTML/HTML5", value: "95%", color: "bg-success" },
+                  { label: "CSS", value: "80%", color: "bg-info" },
+                  { label: "JavaScript", value: "80%", color: "bg-warning" },
+                  { label: "React", value: "90%", color: "bg-danger" },
                 ].map((skill, idx) => (
                   <div key={idx} className="progress my-4">
                     <div
@@ -72,7 +69,7 @@ const About = () => {
         <SkillsSection />
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;
